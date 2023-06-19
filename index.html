@@ -10,27 +10,894 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Titan+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="../src/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <title>IceCream</title>
-    <link rel="stylesheet" href="./css/index.min.css" />
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>    
+    <link rel="stylesheet" href="/css/index.min.css" />
+    <link rel="stylesheet" href="/sass/index.scss" />
+    <script type="module" src="/index.js"></script>    
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <!-- Header -->
-    <include src="./partials/hero.html"></include>
+<!-- HEADER -->
+<header class="header" id="home">
+  <div class="container-center header__container">
+    <a class="logo link" href="index.html"></a>
+      <img
+        class="logo__icon"
+        src="/images/logo-D1-min.png"
+        alt="Website Logo"
+        width="199"
+        height="50"
+      />
+    </a>
+    <button
+      class="menu-button menu-button--on js-open-menu"
+      type="button"
+      aria-label="mobile menu toggle button"
+      aria-expanded="false"
+    >
+      <svg class="menu-button__icon" width="20" height="12">
+        <use href="/images/symbol.svg#icon-hamburger-button"></use>
+      </svg>
+    </button>
+    <div class="menu-wrap js-menu-container">
+      <button
+        class="menu-button menu-button--off js-close-menu"
+        type="button"
+        aria-label="mobile menu toggle button"
+        aria-expanded="true"
+      >
+        <svg class="menu-button__icon" width="14" height="14">
+          <use href="/images/symbol.svg#icon-modal-close-button"></use>
+        </svg>
+      </button>
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="index.html" class="nav-list__link link">Home</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="index.html" class="nav-list__link link">About us</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="index.html" class="nav-list__link link">How it’s made?</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="index.html" class="nav-list__link link">Our products</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="index.html" class="nav-list__link link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header-button menu-wrap__button button" type="button" data-modal-open>
+        Buy now
+        <svg class="header-button__icon" width="8" height="10">
+          <use href="/images/symbol.svg#buy-now-arrow"></use>
+        </svg>
+      </button>
+    </div>
+    <button class="header-button header-button--main button" type="button" data-modal-open>
+      Buy now
+      <svg class="header-button__icon" width="8" height="10">
+        <use href="/images/symbol.svg#buy-now-arrow"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="container-center hero__space">
+    <div class="hero__flex">
+      <h1 class="hero__caption">
+        ice cream made with
+        <span class="hero__caption--pink">passion</span>
+      </h1>
+      <ul class="hero-cafes">
+        <li class="hero-cafes__item">
+          <img class="hero__ellipse" src="/images/hero-ellipse.svg" alt="" />
+          <span class="hero-cafes__number">16</span>
+          <p class="hero-cafes__text">cafes</p>
+        </li>
+        <li class="hero-cafes__item">
+          <img class="hero__ellipse" src="/images/hero-ellipse.svg" alt="" />
+          <span class="hero-cafes__number">23</span>
+          <p class="hero-cafes__text">food trucks</p>
+        </li>
+      </ul>
+    </div>
+    <ul class="hero__list">
+      <li class="hero__item">
+        <a href="index.html" class="hero__btn hero__btn--pink">Products</a>
+      </li>
+      <li class="hero__item">
+        <a href="index.html" class="hero__btn hero__btn--white">How it’s made?</a>
+      </li>
+    </ul>
+    <picture>
+      <source
+        media="(min-width: 1200px)"
+        srcset="
+          /images/milk-D1-min.png 1x,
+          /images/milk-D2-min.png 2x,
+          /images/milk-D3-min.png 3x
+        "
+        type=""
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+        /images/milk-T1-min.png 1x,
+        /images/milk-T2-min.png 2x,
+        /images/milk-T3-min.png 3x
+        "
+        type=""
+      />
+      <img
+        class="hero__milk"
+        src="/images/milk-T1-min.png"
+        alt="icecream woman"
+        width="213"
+        height="216"
+      />
+    </picture>
+    <div class="hero__note">
+      <p class="hero__text">
+        Indulge in a scoop of ice cream made with passion and treat your taste buds to an
+        unforgettable experience!
+      </p>
+      <button class="hero__btn--arrow" aria-label="See more button" type="button"></button>
+    </div>
+    <picture>
+      <source
+        media="(min-width: 1200px)"
+        srcset="
+          /images/iceCream-D1-min.png 1x,
+          /images/iceCream-D2-min.png 2x,
+          /images/iceCream-D3-min.png 3x
+        "
+        type=""
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+        /images/iceCream-D1-min.png 1x,
+        /images/iceCream-D2-min.png 2x,
+        /images/iceCream-D3-min.png 3x
+        "
+        type=""
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          /images/ice-M1-min.png 1x,
+          /images/ice-M2-min.png 2x,
+          /images/ice-M3-min.png 3x
+        "
+        type=""
+      />
+      <img
+        class="hero__ice-cream"
+        src="/images/iceCream-D1-min.png"
+        alt="ice cream"
+        width="236"
+        height="557"
+      />
+    </picture>
+    <span class="hero__round"></span>
+    <picture>
+      <source
+        media="(min-width: 1200px)"
+        srcset="
+          /images/woman-D1-min.png 1x,
+          /images/woman-D2-min.png 2x,
+          /images/woman-D3-min.png 3x
+        "
+        type=""
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          /images/woman-T1-min.png 1x,
+          /images/woman-T2-min.png 2x,
+          /images/woman-T3-min.png 3x
+        "
+        type="image/jpg"
+      />
+      <img
+        class="hero__girl"
+        src="/images/woman-D1-min.png"
+        alt="iceacream woman"
+        width="293"
+        height="232"
+      />
+    </picture>
+  </div>
+</section>
+<!-- MODAL -->
+<div class="backdrop backdrop--is-hidden" data-modal>
+  <div class="modal-content">
+    <button class="modal-content__button" data-modal-close>
+      <svg class="modal-content__icon" width="18" height="18">
+        <use href="/images/symbol.svg#icon-modal-close-button"></use>
+      </svg>
+    </button>
+    <form class="feedback" autocomplete="off">
+      <p class="feedback__text">
+        Please fill in the form and we'll call you as soon as possible.
+      </p>
+      <label class="feedback__label">
+        <span class="feedback__part">Your Name</span>
+        <input
+          class="feedback__input"
+          type="text"
+          name="name"
+          minlength="2"
+          required
+        />
+        <svg class="feedback__icon" width="18" height="18">
+          <use href="/images/symbol.svg#icon-user"></use>
+        </svg>
+      </label>
+      <label class="feedback__label">
+        <span class="feedback__part">Phone Number</span>
+        <input class="feedback__input" type="tel" name="tel" required />
+        <svg class="feedback__icon" width="18" height="18">
+          <use href="/images/symbol.svg#icon-telephone"></use>
+        </svg>
+      </label>
+      <label class="feedback__label">
+        <span class="feedback__part">E-mail address</span>
+        <input class="feedback__input" type="email" name="mail" required />
+        <svg class="feedback__icon" width="18" height="18">
+          <use href="/images/symbol.svg#icon-email"></use>
+        </svg>
+      </label>
+      <label class="feedback__comment">
+        <span class="feedback__part">Comment</span>
+        <textarea
+          class="feedback__message"
+          name="comment"
+          cols="20"
+          rows="6"
+          placeholder="Don't be shy, say something"
+        ></textarea>
+      </label>
+      <label class="feedback__accord">
+        <input
+          class="form__checkbox visually-hidden"
+          type="checkbox"
+          name="accord"
+        />
+        <span class="feedback__field"></span>
+        <span class="feedback__consent"
+          >I agree to the newsletter and accept the
+          <a href="index.html" class="feedback__link"> Terms and Conditions</a></span
+        >
+      </label>
+      <button class="button feedback__button" type="submit">
+        Send request
+      </button>
+    </form>
+  </div>
+  <script src="/modal.js"></script>
+</div>
+
+
+
     <!-- Products -->
-    <include src="./partials/products.html"></include>
+    <section class="products">
+      <div class="container">
+        <p class="products__label">100% natural</p>
+        <h2 class="products__title">products</h2>
+        <ul class="product__list">
+          <li class="products__item">
+            <h3 class="products__name">ice cream</h3>
+            <div class="dots"></div>
+            <p class="products__description">
+              Indulge in our rich and creamy ice cream, handcrafted with
+              all-natural ingredients and available in a variety of flavors.
+            </p>
+            <button class="products__btn" aria-label="details"></button>
+          </li>
+          <li class="products__item">
+            <h3 class="products__name">ice coffe</h3>
+            <div class="dots"></div>
+            <p class="products__description">
+              Refresh and energize with our perfectly brewed iced coffee, made
+              with high-quality beans and served over ice.
+            </p>
+            <button class="products__btn" aria-label="details"></button>
+          </li>
+          <li class="products__item">
+            <h3 class="products__name">milkshakes</h3>
+            <div class="dots"></div>
+            <p class="products__description">
+              Satisfy your sweet tooth with our thick, made with premium ice
+              cream, topped with whipped cream and your favorite toppings.
+            </p>
+            <button class="products__btn" aria-label="details"></button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
     <!-- About -->
-    <include src="./partials/about.html"></include>
+<section class="about">
+    <div class="container">
+      <div class="about-title">
+        <h3 class="about-title__second">tradition and love</h3>
+        <h1 class="about-title__first">how it's made?</h1>
+      </div>
+      <div class="container-about">
+        <div class="about-image">
+          <picture>
+            <source
+              srcset="./images/cowmilk-D@X1.png, ./images/cowmilk-D@X2.png"
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="./images/cowmilk-M@X1.png, ./images/cowmilk-M@X2.png"
+            />
+            <source
+              srcset="./images/cowmilk-T@X1.png, ./images/cowmilk-T@X2.png"
+            />
+            <image src="./images/cowmilk-D@X1.png ," alt="milk"></image>
+          </picture>
+        </div>
+        <div class="about-description">
+          <p class="about-description__first">
+            Ice is a place where you will become not only a little happier, but
+            also healthier. Health is the main value for us, and we follow it when
+            creating our handmade desserts.
+          </p>
+          <p class="about-description__second">
+            We use traditional recipes and 100% natural ingredients. Our products
+            are so natural that they can be given to children from the age of
+            three years. Sweets lovers can expect 55 types of ice cream, 15 types
+            of coffee and 23 milkshakes.
+          </p>
+          <div>
+            <button class="about-button">
+              <span class="abut-button__text">Read more</span>
+              <svg class="about-button__icon" width="8px" height="8px">
+                <use href="/images/symbol.svg#icon-Vector-1"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+  
+        <div class="advantages">
+          <ul class="advantages-list">
+            <li class="advantages-list__item">
+              <svg width="50" height="50">
+                <use href="/images/symbol.svg#icon-glassice"></use>
+              </svg>
+              <p class="advantages-list__number">721</p>
+              <p class="advantages-list__text">
+                At 721 Cow, we're passionate about producing the highest quality
+                ice cream possible.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <svg width="50" height="50">
+                <use href="/images/symbol.svg#icon-applesice"></use>
+              </svg>
+              <p class="advantages-list__number">16kg</p>
+              <p class="advantages-list__text">
+                You can be sure you're getting a scoop of the freshest ice cream
+                around.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <svg width="50" height="50">
+                <use href="/images/symbol.svg#icon-candelice"></use>
+              </svg>
+              <p class="advantages-list__number">84</p>
+              <p class="advantages-list__text">
+                We use only the freshest, locally-sourced ingredients to make our
+                84 unique and delicious flavors.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
     <!-- Gallery -->
-    <include src="./partials/gallery.html"></include>
+    <section class="gallery-section">
+      <div class="container-images">
+        <div class="container-images__first">
+          <img
+            alt="kaki Ice-Cream"
+            class="container-images__image"
+            srcset="
+              ./images/gallery1-D-1x.jpg,
+              ./images/gallery1-D-2x.jpg,
+              ./images/gallery1-D-3x.jpg,
+              ./images/gallery1-M-1x.jpg  768w,
+              ./images/gallery1-M-2x.jpg  768w,
+              ./images/gallery1-M-3x.jpg  768w,
+              ./images/gallery1-T-1x.jpg 1200w,
+              ./images/gallery1-T-2x.jpg 1200w,
+              ./images/gallery1-T-3x.jpg 1200w
+            "
+          />
+        </div>
+        <div class="container-images__second">
+          <div>
+            <img
+              alt="cone Ice-Cream"
+              class="container-images__image"
+              srcset="
+                ./images/gallery2-D-1x.jpg,
+                ./images/gallery2-D-2x.jpg,
+                ./images/gallery2-D-3x.jpg,
+                ./images/gallery2-M-1x.jpg  768w,
+                ./images/gallery2-M-2x.jpg  768w,
+                ./images/gallery2-M-3x.jpg  768w,
+                ./images/gallery2-T-1x.jpg 1200w,
+                ./images/gallery2-T-2x.jpg 1200w,
+                ./images/gallery2-T-3x.jpg 1200w
+              "
+            />
+          </div>
+          <div>
+            <img
+              alt="Ice-Cream on stick"
+              class="container-images__image"
+              srcset="
+                ./images/gallery3-D-1x.jpg,
+                ./images/gallery3-D-2x.jpg,
+                ./images/gallery3-D-3x.jpg,
+                ./images/gallery3-M-1x.jpg  768w,
+                ./images/gallery3-M-2x.jpg  768w,
+                ./images/gallery3-M-3x.jpg  768w,
+                ./images/gallery3-T-1x.jpg 1200w,
+                ./images/gallery3-T-2x.jpg 1200w,
+                ./images/gallery3-T-3x.jpg 1200w
+              "
+            />
+          </div>
+        </div>
+        <div class="container-images__third">
+          <div>
+            <img
+              alt="fruit Ice-Cream"
+              class="container-images__image"
+              srcset="
+                ./images/gallery4-D-1x.jpg,
+                ./images/gallery4-D-2x.jpg,
+                ./images/gallery4-D-3x.jpg,
+                ./images/gallery4-M-1x.jpg  768w,
+                ./images/gallery4-M-2x.jpg  768w,
+                ./images/gallery4-M-3x.jpg  768w,
+                ./images/gallery4-T-1x.jpg 1200w,
+                ./images/gallery4-T-2x.jpg 1200w,
+                ./images/gallery4-T-3x.jpg 1200w
+              "
+            />
+          </div>
+          <div>
+            <img
+              alt="girl with Ice-Cream"
+              class="container-images__image"
+              srcset="
+                ./images/gallery5-D-1x.jpg,
+                ./images/gallery5-D-2x.jpg,
+                ./images/gallery5-D-3x.jpg,
+                ./images/gallery5-M-1x.jpg  768w,
+                ./images/gallery5-M-2x.jpg  768w,
+                ./images/gallery5-M-3x.jpg  768w,
+                ./images/gallery5-T-1x.jpg 1200w,
+                ./images/gallery5-T-2x.jpg 1200w,
+                ./images/gallery5-T-3x.jpg 1200w
+              "
+            />
+          </div>
+        </div>
+        <div class="container-images__fourth">
+          <div>
+            <img
+              alt="Ice-Cream dessert"
+              class="container-images__image"
+              srcset="
+                ./images/gallery6-D-1x.jpg,
+                ./images/gallery6-D-2x.jpg,
+                ./images/gallery6-D-3x.jpg,
+                ./images/gallery6-M-1x.jpg  768w,
+                ./images/gallery6-M-2x.jpg  768w,
+                ./images/gallery6-M-3x.jpg  768w,
+                ./images/gallery6-T-1x.jpg 1200w,
+                ./images/gallery6-T-2x.jpg 1200w,
+                ./images/gallery6-T-3x.jpg 1200w
+              "
+            />
+          </div>
+          <div>
+            <img
+              alt="Ice-Cream photo"
+              class="container-images__image"
+              srcset="
+                ./images/gallery7-D-1x.jpg,
+                ./images/gallery7-D-2x.jpg,
+                ./images/gallery7-D-3x.jpg,
+                ./images/gallery7-M-1x.jpg  768w,
+                ./images/gallery7-M-2x.jpg  768w,
+                ./images/gallery7-M-3x.jpg  768w,
+                ./images/gallery7-T-1x.jpg 1200w,
+                ./images/gallery7-T-2x.jpg 1200w,
+                ./images/gallery7-T-3x.jpg 1200w
+              "
+            />
+          </div>
+        </div>
+        <div class="container-images__fifth">
+          <div>
+            <img
+              alt="dog and Ice-Cream"
+              class="container-images__image"
+              srcset="
+                ./images/gallery8-D-1x.jpg,
+                ./images/gallery8-D-2x.jpg,
+                ./images/gallery8-D-3x.jpg,
+                ./images/gallery8-M-1x.jpg  768w,
+                ./images/gallery8-M-2x.jpg  768w,
+                ./images/gallery8-M-3x.jpg  768w,
+                ./images/gallery8-T-1x.jpg 1200w,
+                ./images/gallery8-T-2x.jpg 1200w,
+                ./images/gallery8-T-3x.jpg 1200w
+              "
+            />
+          </div>
+          <div>
+            <img
+              alt="glass with frappuccino "
+              class="container-images__image"
+              src="./images/gallery9-D-3x.jpg"
+              srcset="
+                ./images/gallery9-D-1x.jpg,
+                ./images/gallery9-D-2x.jpg,
+                ./images/gallery9-D-3x.jpg,
+                ./images/gallery9-M-1x.jpg  768w,
+                ./images/gallery9-M-2x.jpg  768w,
+                ./images/gallery9-M-3x.jpg  768w,
+                ./images/gallery9-T-1x.jpg 1200w,
+                ./images/gallery9-T-2x.jpg 1200w,
+                ./images/gallery9-T-3x.jpg 1200w
+              "
+            />
+          </div>
+        </div>
+        <div class="container-images__sixth">
+          <img
+            alt="Ice-Cream in a jar"
+            class="container-images__image"
+            srcset="
+              ./images/gallery10-D-1x.jpg,
+              ./images/gallery10-D-2x.jpg,
+              ./images/gallery10-D-3x.jpg,
+              ./images/gallery10-M-1x.jpg  768w,
+              ./images/gallery10-M-2x.jpg  768w,
+              ./images/gallery10-M-3x.jpg  768w,
+              ./images/gallery10-T-1x.jpg 1200w,
+              ./images/gallery10-T-2x.jpg 1200w,
+              ./images/gallery10-T-3x.jpg 1200w
+            "
+          />
+        </div>
+      </div>
+    </section>
+    
+
     <!-- Customer reviews -->
-    <include src="./partials/customer-reviews.html"></include>
+    <section class="customer">
+      <div class="container">
+        <div class="customer-wrapper">
+          <button class="prev">&#8678;</button>
+          <button class="next">&#8680;</button>
+          <div class="customer-wrapper__header">
+            <picture class="customer-wrapper__img">
+              <source
+                media="screen and (min-width: 320px)"
+                srcset="
+                  ./images/wo-b1-min.png 1x,
+                  ./images/wo-b2-min.png 2x,
+                  ./images/wo-b3-min.png 3x
+                "
+              />
+              <img src="./images/wo-b1-min.png" alt="logo" />
+            </picture>
+    
+            <div class="customer-wrapper__descr">
+              <div class="customer-wrapper__descr-img">
+                <img src="./images/dotts-min.png" alt="dots" />
+              </div>
+              <div class="customer-wrapper__descr-text">
+                <span
+                  >Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                  Aliquam sem. In hendrerit</span
+                >
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cupiditate, eaque!......</span
+                >
+              </div>
+            </div>
+    
+            <div class="customer-wrapper__info">
+              <div class="customer-wrapper__info-dotts">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="customer-wrapper__info-city">
+                <span>Leiya, New York</span>
+              </div>
+            </div>
+    
+            <div class="customer-wrapper__info-footer">
+              <svg
+                width="18"
+                height="18"
+                class="customer-wrapper__info-svg customer-wrapper__info-bcg"
+              >
+                <use href="./images/symbol-defs.svg#home"></use>
+              </svg>
+              <span
+                class="customer-wrapper__info-circle customer-wrapper__info-color"
+              ></span>
+              <span class="customer-wrapper__info-circle"></span>
+            </div>
+          </div>
+          <div class="customer-wrapper__header">
+            <picture class="customer-wrapper__img">
+              <source
+                media="screen and (min-width: 320px)"
+                srcset="
+                  ./images/wo-o1-min.png 1x,
+                  ./images/wo-o2-min.png 2x,
+                  ./images/wo-o3-min.png 3x
+                "
+              />
+              <img src="./images/wo-o1-min.png" alt="logo" />
+            </picture>
+    
+            <div class="customer-wrapper__descr">
+              <div class="customer-wrapper__descr-img">
+                <img src="./images/dotts-min.png" alt="dots" />
+              </div>
+              <div class="customer-wrapper__descr-text">
+                <span
+                  >Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                  Aliquam sem. In hendrerit</span
+                >
+                <span>nulla quam nunc, accumsan congue. </span>
+              </div>
+            </div>
+    
+            <div class="customer-wrapper__info">
+              <div class="customer-wrapper__info-dotts">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="customer-wrapper__info-city">
+                <span>Nelly, Miami</span>
+              </div>
+            </div>
+    
+            <div class="customer-wrapper__info-footer">
+              <svg
+                width="18"
+                height="18"
+                class="customer-wrapper__info-svg customer-wrapper__info-bcg"
+              >
+                <use href="./images/symbol-defs.svg#home"></use>
+              </svg>
+              <span class="customer-wrapper__info-circle"></span>
+              <span
+                class="customer-wrapper__info-circle customer-wrapper__info-color"
+              ></span>
+            </div>
+          </div>
+          <div class="customer-wrapper__header">
+            <picture class="customer-wrapper__img">
+              <source
+                media="screen and (min-width: 320px)"
+                srcset="
+                  ./images/wo-n1-min.png 1x,
+                  ./images/wo-n2-min.png 2x,
+                  ./images/wo-n3-min.png 3x
+                "
+              />
+              <img src="./images/wo-n1-min.png" alt="logo" />
+            </picture>
+    
+            <div class="customer-wrapper__descr">
+              <div class="customer-wrapper__descr-img">
+                <img src="./images/dotts-min.png" alt="dots" />
+              </div>
+              <div class="customer-wrapper__descr-text">
+                <span
+                  >Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                  Aliquam sem. In hendrerit</span
+                >
+                <span
+                  >nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel
+                  risus.</span
+                >
+              </div>
+            </div>
+    
+            <div class="customer-wrapper__info">
+              <div class="customer-wrapper__info-dotts">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="customer-wrapper__info-city">
+                <span>Emily, Los Angeles</span>
+              </div>
+            </div>
+    
+            <div class="customer-wrapper__info-footer">
+              <svg width="18" height="18" class="customer-wrapper__info-svg">
+                <use href="./images/symbol-defs.svg#home"></use>
+              </svg>
+              <span class="customer-wrapper__info-circle"></span>
+              <span class="customer-wrapper__info-circle"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
     <!-- Contacts -->
-    <include src="./partials/contacts.html"></include>
+    <section class="contacts">
+      <!-- list1 -->
+      <div class="contacts-container">
+        <ul class="contacts-list font__weight--500 font__size--16">
+          <!-- Item1 -->
+          <li class="contacts-list__item">
+            <p class="contacts-list__item__cafe">CAFE</p>
+            <div class="contacts-list__item-location">
+              <p class="contacts-list__item-location__city">Chicago</p>
+              <p class="contacts-list__item-location__description">
+                Handcrafted coffee, baked goods, and premium ice cream.
+              </p>
+            </div>
+            <div class="contacts-list__item-program">
+              <p class="contacts-list__item-program__day">Monday - Friday</p>
+              <p class="contacts-list__item-program__hours">06:00 AM - 10:00 PM</p>
+              <p class="contacts-list__item-program__day">Saturday - Sunday</p>
+              <p class="contacts-list__item-program__hours">08:00 AM - 16:00 PM</p>
+            </div>
+            <div class="contacts-list__item-contact">
+              <a
+                class="contacts-list__item-contact__link" 
+                href="tel:+61(0)383766284" 
+                >+61(0) 383 766 284</a
+              >
+              <a class="contacts-list__item-contact__link" href="mailto:noreply@envato.com"
+                >noreply@envato.com</a
+              >
+            </div>
+          </li>
+    
+          <!-- Item2 -->
+          <li class="contacts-list__item">
+            <p class="contacts-list__item__food-truck">FOOD TRUCK</p>
+            <div class="contacts-list__item-location">
+                <p class="contacts-list__item-location__city">Los Angeles</p>
+                <p class="contacts-list__item-location__description">
+                    Fusion cuisine and refreshing ice cream made with passion.
+                </p>
+              </div>
+              <div class="contacts-list__item-program">
+                <p class="contacts-list__item-program__day">Monday - Friday</p>
+                <p class="contacts-list__item-program__hours">06:00 AM - 10:00 PM</p>
+                <p class="contacts-list__item-program__day">Saturday - Sunday</p>
+                <p class="contacts-list__item-program__hours">08:00 AM - 16:00 PM</p>
+              </div>
+              <div class="contacts-list__item-contact">
+                <a
+                  class="contacts-list__item-contact__link"
+                  href="tel:+61(0)383766284" 
+                  >+61(0) 383 766 284</a
+                >
+                <a class="contacts-list__item-contact__link" href="mailto:noreply@envato.com" 
+                  >noreply@envato.com</a
+                >
+              </div>
+          </li>
+    
+          <!-- Item3 -->
+          <li class="contacts-list__item">
+            <p class="contacts-list__item__cafe">CAFE</p>
+            <div class="contacts-list__item-location">
+              <p class="contacts-list__item-location__city">New York</p>
+              <p class="contacts-list__item-location__description">
+                Specialty teas, artisanal pastries, mouth-watering ice cream.
+              </p>
+            </div>
+            <div class="contacts-list__item-program">
+              <p class="contacts-list__item-program__day">Monday - Friday</p>
+              <p class="contacts-list__item-program__hours">06:00 AM - 10:00 PM</p>
+              <p class="contacts-list__item-program__day">Saturday - Sunday</p>
+              <p class="contacts-list__item-program__hours">08:00 AM - 16:00 PM</p>
+            </div>
+            <div class="contacts-list__item-contact">
+              <a
+                class="contacts-list__item-contact__link"
+                href="tel:+61(0)383766284" 
+                >+61(0) 383 766 284</a
+              >
+              <a class="contacts-list__item-contact__link" href="mailto:noreply@envato.com" 
+                >noreply@envato.com</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+      <!-- list2 -->
+      <ul class="contacts-btn font__weight--700 font__size--16">
+        <!-- Item1 -->
+        <li class="contacts-btn__item">
+          <button class="contacts-btn__item-locations" type="button">
+            <span class="contacts-btn__item-title1">Our Locations</span
+            ><svg class="contacts-btn__item-icon1" width="8px" height="10px">
+              <use href="/images/symbol.svg#icon-Vector-22"></use>
+            </svg>
+          </button>
+        </li>
+    
+        <!-- Item2 -->
+        <li class="contacts-btn__item">
+          <button class="contacts-btn__item-franchise" type="button">
+            <span class="contacts-btn__item-title2">Franchise</span
+            ><svg class="contacts-btn__item-icon2" width="8px" height="10px">
+              <use href="/images/symbol.svg#icon-Vector-11"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </section>
+    
+
     <!-- Footer -->
-    <include src="./partials/footer.html"></include>
+    <footer class="footer">
+      <!-- section 1 -->
+      <section class="footer__container">
+          <div class="footer__container-text">
+              <span class="footer__container-text__title1">homemade ice cream made</span>
+              <span class="footer__container-text__title2">with passion</span>
+          </div>
+          <div class="footer__container__socials">
+              <div class="footer__container__socials__container">
+                  <!-- GITHUB -->
+                  <a aria-label="Go to our Github page" class="footer__container__socials__container-link" href="https://github.com/" target="_blank"><svg class="footer__container__socials__container-icon" width="32px" height="32px"><use href="/images/symbol.svg#icon-github"></use></svg></a>
+                  <!-- TELEGRAM -->
+                  <a aria-label="Go to our Telegram page" class="footer__container__socials__container-link" href="https://telegram.org/" target="_blank"><svg class="footer__container__socials__container-icon" width="32px" height="32px"><use href="/images/symbol.svg#icon-telegram"></use></svg></a>
+                  <!-- FACEBOOK -->
+                  <a aria-label="Go to our Facebook group" class="footer__container__socials__container-link" href="https://www.facebook.com/" target="_blank"><svg class="footer__container__socials__container-icon" width="32px" height="32px"><use href="/images/symbol.svg#icon-Group"></use></svg></a>
+              </div>
+              <div class="footer__socials__contact">
+                  <span class="footer__socials__contact__text">Feel free to contact</span>
+                  <a
+                  class="footer__socials__contact__link"
+                  href="tel:+61(0)383766284"
+                  >+61(0) 383 766 284</a
+                >
+              </div>
+          </div>
+      </section>
+      <!-- section 2 -->
+      <div class="footer__copyright">
+          <p class="footer__copyright__text">© 2022 - IceCream. All Rights Reserved. </p>
+      </div>
+  </footer>
   </body>
 </html>
